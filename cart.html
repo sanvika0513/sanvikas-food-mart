@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout - Sanvika's Food Mart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>🛒 Checkout</h2>
+
+<div class="checkout">
+
+  <!-- LEFT SIDE -->
+  <div class="cart-box">
+    <div id="cart-items"></div>
+
+    <p><strong>Subtotal:</strong> ₹<span id="subtotal">0</span></p>
+
+    <input type="text" id="discount" placeholder="Enter discount code">
+    <button onclick="applyDiscount()">Apply</button>
+
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+    <!-- RETURN BUTTON -->
+    <button class="return-btn" onclick="goBack()">⬅ Return to Menu</button>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="payment-box">
+    <h3>Payment Method</h3>
+
+    <label class="payment-option">
+      <input type="radio" name="pay"> 💳 Credit Card
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="pay"> 💳 Debit Card
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="pay"> 📱 PhonePe
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="pay"> 📱 Google Pay
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="pay"> 📱 Paytm
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="pay"> 💵 Cash on Delivery
+    </label>
+
+    <button class="pay-btn" onclick="placeOrder()">Place Order</button>
+  </div>
+
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>

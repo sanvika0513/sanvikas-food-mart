@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Successful - Sanvika's Food Mart</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .success-box {
+      max-width: 500px;
+      margin: 100px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .success-box h1 {
+      color: #2ecc71;
+      margin-bottom: 15px;
+    }
+
+    .success-box p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .success-box button {
+      background: #2ecc71;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="success-box">
+  <h1>🎉 Order Placed Successfully!</h1>
+  <p>Thank you for shopping at <strong>Sanvika's Food Mart</strong> 🥦</p>
+  <p>Your fresh items will be delivered soon 🚚</p>
+
+  <button onclick="goHome()">⬅ Back to Home</button>
+</div>
+
+<script>
+  function goHome() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
