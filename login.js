@@ -1,32 +1,47 @@
+/* =========================
+   SIGNUP FUNCTION
+========================= */
 function signup() {
-  let user = document.getElementById("newUser").value;
-  let pass = document.getElementById("newPass").value;
+  const user = document.getElementById("newUser").value.trim();
+  const pass = document.getElementById("newPass").value.trim();
 
   if (!user || !pass) {
     alert("Please fill all fields");
     return;
   }
 
+  // Save user credentials
   localStorage.setItem("user", user);
   localStorage.setItem("pass", pass);
 
   alert("Account created successfully 🎉");
-  window.location.href = "index.html";   // go to login after signup
+
+  // Redirect to LOGIN page (index.html)
+  window.location.href = "index.html";
 }
 
-function login() {
-  let user = document.getElementById("username").value;
-  let pass = document.getElementById("password").value;
 
-  let savedUser = localStorage.getItem("user");
-  let savedPass = localStorage.getItem("pass");
+/* =========================
+   LOGIN FUNCTION
+========================= */
+function login() {
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value.trim();
+
+  const savedUser = localStorage.getItem("user");
+  const savedPass = localStorage.getItem("pass");
+
+  if (!savedUser || !savedPass) {
+    alert("No account found. Please sign up first ❗");
+    return;
+  }
 
   if (user === savedUser && pass === savedPass) {
     alert("Login successful ✅");
-    window.location.href = "home.html";  // ✅ FOOD MENU PAGE
+
+    // Redirect to FOOD MENU page
+    window.location.href = "home.html";
   } else {
     alert("Invalid credentials ❌");
   }
 }
-
-
