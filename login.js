@@ -11,7 +11,7 @@ function signup() {
   localStorage.setItem("pass", pass);
 
   alert("Account created successfully 🎉");
-  window.location.href = "login.html";   // go to login after signup
+  window.location.href = "index.html";   // go to login after signup
 }
 
 function login() {
@@ -28,4 +28,5 @@ function login() {
     alert("Invalid credentials ❌");
   }
 }
+
 
